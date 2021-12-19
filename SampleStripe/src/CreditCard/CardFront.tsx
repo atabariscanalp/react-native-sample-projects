@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, Image, Text, StyleSheet} from 'react-native';
 import worldMap from '../../assets/worldmap.png';
+import visaIcon from '../../assets/visa_icon.png';
 
 type Props = {
   cardNumber: string;
@@ -14,7 +15,12 @@ const CardFront: React.FC<Props> = ({cardNumber, expiryDate, fullName}) => (
     <View style={styles.imageContainer}>
       <Text style={styles.cardNumberText}>{cardNumber}</Text>
       <Text style={styles.expiryDateText}>{expiryDate}</Text>
-      <Text style={styles.fullNameText}>{fullName}</Text>
+      <View style={styles.bottomRow}>
+        <Text style={styles.fullNameText}>{fullName}</Text>
+        {cardNumber.length > 2 ? (
+          <Image source={visaIcon} style={styles.visaIcon} />
+        ) : null}
+      </View>
     </View>
   </View>
 );
@@ -73,5 +79,17 @@ const styles = StyleSheet.create({
     fontFamily: 'Iowan Old Style',
     position: 'relative',
     right: 20,
+  },
+  visaIcon: {
+    width: 35,
+    height: 24,
+    marginBottom: 4,
+    position: 'relative',
+    left: 20,
+  },
+  bottomRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
 });
