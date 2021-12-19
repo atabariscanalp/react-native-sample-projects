@@ -1,8 +1,12 @@
-<img src="./assets/OnboardingScreen.png" height="600" alt="onboarding-screen">
+<p align="center">
+  
+  <img src="./assets/OnboardingScreen.png" height="600" alt="onboarding-screen">
 
-<img src="./assets/PaymentRecording.gif" height="600" alt="payment-recording">
+  <img src="./assets/PaymentRecording.gif" height="600" alt="payment-recording">
 
-# Hi
+</p>
+
+## Hi
 
 This is a simple stripe test payment app, it only consist 2 screens and it totally made by me!
 
