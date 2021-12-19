@@ -1,6 +1,6 @@
-![onboarding-screen](./assets/OnboardingScreen.png)
+<img src="./assets/OnboardingScreen.png" height="600" alt="onboarding-screen">
 
-![payment-recording-gif](./assets/PaymentRecording.gif)
+<img src="./assets/PaymentRecording.gif" height="600" alt="payment-recording">
 
 # Hi
 
