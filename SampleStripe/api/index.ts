@@ -12,16 +12,6 @@ const stripe = new Stripe(`${process.env.API_KEY}`, {
 const app = express();
 app.use(express.json());
 
-app.post('/create-payment-intent', async (_, res) => {
-  const paymentIntent = await stripe.paymentIntents.create({
-    amount: 30000,
-    currency: 'usd',
-  });
-  res.send({
-    clientSecret: paymentIntent.client_secret,
-  });
-});
-
 app.post('/get-card-token', async (req, res) => {
   const {fullName, cardNumber, expMonth, expYear, cvc} = req.body;
 
